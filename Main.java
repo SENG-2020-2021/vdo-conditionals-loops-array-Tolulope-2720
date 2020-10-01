@@ -5,7 +5,7 @@ class Main {
    int days_defaulted[]={1,17,19,24,30};
    // declare variables of amount the debtor is to pay per day, and amount the debtor paid and assign values to them
    int amount_perday=348;
-   final float paid=1700;
+   final float paid=200;
   
    // declare all the variables needed for your calculations
     float to_pay=0f,total_amount=0f,extra_amount;
@@ -22,6 +22,8 @@ class Main {
     for(i=0;i<5 &&i<days_paid;i++){
       System.out.print(days_defaulted[i]+",");
     }
+    if(days_paid==0)
+    System.out.print("None");
     System.out.println("");
     if (paid%amount_perday>0&&i<5 ){
       left_topay=amount_perday-(int)(paid%amount_perday);

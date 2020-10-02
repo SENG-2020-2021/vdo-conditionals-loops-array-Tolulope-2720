@@ -17,7 +17,7 @@ class Main {
     totalAmount+=amountPerday;
     System.out.println("Total amount to pay is "+totalAmount);
    // calculate the days the debtor paid for and print the days in which was paid for starting from the left to the right of the array. Also check if there was a day that the debtor did not pay the complete amount for that day, if yes, print the day and the amount left to pay for that day. 
-    daysPaid=(int)(paid/amountPerday);
+    daysPaid=(byte)(paid/amountPerday);
     System.out.print("days debtor paid for ");
     for(i=0;i<5 &&i<daysPaid;i++){
       System.out.print(daysDefaulted[i]+",");

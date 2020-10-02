@@ -2,18 +2,18 @@ class Main {
   public static void main(String[] args) {
    // kindly use appropriate data types for your declaration
    //declare an array variable and assign the days of the month debtor defaulted,
-   int days_defaulted[]={1,17,19,24,30};
+   byte days_defaulted[]={1,17,19,24,30};
    // declare variables of amount the debtor is to pay per day, and amount the debtor paid and assign values to them
-   int amount_perday=348;
-   final float paid=200;
+   final byte amount_perday=118;
+   final float paid=1800;
   
    // declare all the variables needed for your calculations
-    float to_pay=0f,total_amount=0f,extra_amount;
-    int days_paid,days_notpaid,left_topay;
-    int i=0;//for iteration
+    float to_pay=0f,total_amount=0f,extra_amount,left_topay;
+    byte days_paid,days_notpaid;
+    byte i=0;//for iteration
    
    // calculate and print total amount the debtor is to pay using for each loop
-    for(int x : days_defaulted)
+    for(byte x : days_defaulted)
     total_amount+=amount_perday;
     System.out.println("Total amount to pay is "+total_amount);
    // calculate the days the debtor paid for and print the days in which was paid for starting from the left to the right of the array. Also check if there was a day that the debtor did not pay the complete amount for that day, if yes, print the day and the amount left to pay for that day. 
@@ -26,7 +26,7 @@ class Main {
     System.out.print("None");
     System.out.println("");
     if (paid%amount_perday>0&&i<5 ){
-      left_topay=amount_perday-(int)(paid%amount_perday);
+      left_topay=amount_perday-(paid%amount_perday);
     System.out.println("You did not complete day "+days_defaulted[i]+ " amount left to pay is "+left_topay);
     }
    // calculate amount the debtor is left to  pay if he did not pay complete fees and the days not paid for or  check if the debtor paid extra and the extra amount he paid for, or if he paid the exact amount needed to be paid and print likewise

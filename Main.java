@@ -8,7 +8,7 @@ class Main {
    final float paid=1800;
   
    // declare all the variables needed for your calculations
-    float toPay=0f,totalAmount=0f,extraAmount,leftTopay;
+    float toPay=0f,totalAmount=0f,extraAmount,leftToPay;
     byte daysPaid,daysNotPaid;
     byte i=0;//for iteration
    
@@ -26,13 +26,13 @@ class Main {
     System.out.print("None");
     System.out.println("");
     if (paid%amountPerday>0&&i<5 ){
-      leftTopay=amountPerday-(paid%amountPerday);
-    System.out.println("You did not complete day "+daysDefaulted[i]+ " amount left to pay is "+leftTopay);
+      leftToPay=amountPerday-(paid%amountPerday);
+    System.out.println("You did not complete day "+daysDefaulted[i]+ " amount left to pay is "+leftToPay);
     }
    // calculate amount the debtor is left to  pay if he did not pay complete fees and the days not paid for or  check if the debtor paid extra and the extra amount he paid for, or if he paid the exact amount needed to be paid and print likewise
    if(totalAmount>paid){
      toPay=totalAmount-paid;
-     daysNotPaid=(5-(int)(paid/amountPerday));
+     daysNotPaid=(5-(byte)(paid/amountPerday));
    System.out.println("Amount left to pay is "+toPay +" you did not pay for "+daysNotPaid+" day(s)");
    }
    else if(totalAmount==paid){
